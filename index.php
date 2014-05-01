@@ -1,6 +1,6 @@
 <?
 	function prepareTag(){
-		$params = array('utm_medium','utm_source','utm_campaign');
+		$params = array('utm_medium', 'utm_source', 'utm_campaign');
 		$parts = array();
 		foreach($params as $field)
 			if(isset($_GET[$field])){
@@ -14,6 +14,7 @@
 			return implode('|',$parts);
 	}
 	$tag = prepareTag();
+
 	// -- цикличный счетчик
 /*	$now = time();
 	$interval = 168 * 60 * 60;
@@ -26,11 +27,13 @@
 	// --
 
 	// -- счетчик на фиксированную дату
-	$date2 = '2014-03-19 23:59:59'; // дата и время для счетчика
+	$date2 = '2014-04-29 18:59:59'; // дата и время для счетчика
 	$date1 = 'now';
 
 	$diff = strtotime($date2) - strtotime($date1); // разница в секундах
 	if ($diff < 0) $diff = 0;
+	// --
+    include_once("select-form-part.php");
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -40,38 +43,40 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/ico144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="64x64" href="img/icons/ico64.png">
 	<title>Реалити. Готовый бизнес под ключ</title>
-    <link href='http://fonts.googleapis.com/css?family=Russo+One:400&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-    <!--link href="css/clear.css" type="text/css" rel="stylesheet">
-    <link href="css/jquery.reject.css" type="text/css" rel="stylesheet">
-    <link href="css/jquery.formstyler.css" type="text/css" rel="stylesheet">
-    <link href="css/flipclock.css" type="text/css" rel="stylesheet">
-    <link href="css/social-likes.css" type="text/css" rel="stylesheet">
-    <link href="css/jquery-ui-1.9.2.custom.css" type="text/css" rel="stylesheet">
-    <link href="css/common.css" type="text/css" rel="stylesheet">
-    <link href="css/sprite_background.css" type="text/css" rel="stylesheet"-->
-    <?php
-    $css = Array();
-    foreach (glob('css/*.css') as $filename) {array_push($css, substr($filename, 4));}
-    ?>
-    <link href="combiner/?type=css&files=<?= implode(",", $css) ?>" type="text/css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Russo+One:400&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!--link href="css/clear.css" type="text/css" rel="stylesheet">
+	<link href="css/jquery.reject.css" type="text/css" rel="stylesheet">
+	<link href="css/jquery.formstyler.css" type="text/css" rel="stylesheet">
+	<link href="css/flipclock.css" type="text/css" rel="stylesheet">
+	<link href="css/social-likes.css" type="text/css" rel="stylesheet">
+	<link href="css/jquery-ui-1.9.2.custom.css" type="text/css" rel="stylesheet">
+	<link href="css/common.css" type="text/css" rel="stylesheet">
+	<link href="css/sprite_background.css" type="text/css" rel="stylesheet"-->
+<?
+	$css = Array();
+	foreach (glob('css/*.css') as $filename) {
+		array_push($css, substr($filename, 4));
+	}
+?>
+	<link href="combiner/?type=css&files=<?= implode(",", $css); ?>" type="text/css" rel="stylesheet">
 </head>
 <body>
 <section class="logo">
 	<div class="wrap">
-		<div class="current_date">7 апреля</div>
+		<div class="current_date">16 июня</div>
 		<div class="online-store-from-scratch">
-            <span class="key">Интернет-магазин под ключ</span>
-            <br>
-	        <span class="key_info">Система быстрого открытия интернет-магазина<br> и бизнес-обучения в одном флаконе.</span>
-            <br>
-            <span class="slogan">
-                Зарабатывайте <span class="blue">от 100 000 р. в месяц</span> с удовольствием.
-                <br>
-                Все технические и организационные проблемы<br> мы берем на себя.
-            </span>
-        </div>
+			<span class="key">Интернет-магазин под ключ</span>
+			<br>
+			<span class="key_info">Система быстрого открытия интернет-магазина<br> и бизнес-обучения в одном флаконе.</span>
+			<br>
+			<span class="slogan">
+				Зарабатывайте <span class="blue">от 100 000 р. в месяц</span> с удовольствием.
+				<br>
+				Все технические и организационные проблемы<br> мы берем на себя.
+			</span>
+		</div>
 		<div class="hr"></div>
 		<p class="earn-wrapper">
 			<a class="scroll-down-btn2 earn btn" data-scroll="1">
@@ -86,17 +91,17 @@
 		</div>
 		<div class="scroll-down-btn" data-scroll="1">скроллить вниз</div>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <section class="video_block">
 	<a name="scroll-1"></a>
 	<div class="wrap">
 		<h1>Реалити. Готовый интернет-магазин под ключ. Причины пойти</h1>
-        <p>&nbsp;</p>
-        <div class="video-wrap">
+		<p>&nbsp;</p>
+		<div class="video-wrap">
 			<div class="video" data-videoId="mKtlReCKeNU">
-                <img src="img/video_large.jpg" width="853" height="480">
+				<img src="img/video_large.jpg" width="853" height="480">
 			</div>
 		</div>
 		<div class="social">
@@ -105,141 +110,56 @@
 				<li class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</li>
 			</ul>
 		</div>
-        <div class="slide_link">
-            <a href="#slide_more" class="btn">Узнать больше</a>
-        </div>
+		<div class="slide_link">
+			<a href="#slide_more" class="btn">Узнать больше</a>
+		</div>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <section id="slide_more">
-    <div class="bg-top"></div>
-    <div class="wrap">
-        <h1>Скорее всего у вас была попытка открыть бизнес. И не одна. И возможно, вы даже открыли его.</h1>
-        <p>&nbsp;</p>
-        <p>Тогда вы точно знаете сколько сил (и физических и моральных) и денег нужно потратить на такие штуки как:</p>
-        <p>- создание сайта</p>
-        <p>- подключение прямого номера и ответы на звонки</p>
-        <p>- поиск и аренда склада</p>
-        <p>- работа с курьерами</p>
-        <p>- найм персонала</p>
-        <p>- привлечение трафика</p>
-        <p>&nbsp;</p>
-        <p>Да, со временем, при должном упорстве и запасе финансовых средств вы сложите этот пазл и пройдете бизнес-квест.
-            Мы сами это проходили, теряя месяцы и сотни тысяч рублей.</p>
-        <p>&nbsp;</p>
-        <p>Вам повезло значительно сильнее. Представляем систему от практиков, которые понимают то, с чем вы столкнулись сейчас на своем бизнес-пути.</p>
-        <p>&nbsp;</p>
-        <p>Имсайдер. Интернет-магазин под ключ - это первая в мире система открытия бизнеса, где вы получаете полный
-            набор необходимых инструментов: сайт, колл-центр с вежливыми операторами, склад и логистику, сопровождение ментора - практика, обучение и сообщество.</p>
-        <p>&nbsp;</p>
-        <p>Благодаря тому, что в систему Интернет-магазин под ключ вступают сотни человек, вы получаете все преимущества и инструменты по цене средненького сайта.</p>
-        <p>&nbsp;</p>
-        <p>Это значит, что вы экономите:</p>
-        <p>&nbsp;</p>
-        <p>- сотни часов поисков правильного пути</p>
-        <p>- десятки (а то и сотни) тысяч рублей на экспериментах с созданием сайта</p>
-        <p>- силы и нервы на прохождении различных курсов и тренингов</p>
-        <p>&nbsp;</p>
-        <p>Это значит, что вы получаете:</p>
-        <p>&nbsp;</p>
-        <p>- готовый набор инструментов для открытия интернет-бизнеса</p>
-        <p>- качественное обучение от практиков</p>
-        <p>- менторскую поддержку на время обучения</p>
-        <p>- готовый бизнес план по заработку от 100 000 р. в месяц</p>
-    </div>
-    <div class="bg-bottom"></div>
+	<div class="bg-top"></div>
+	<div class="wrap">
+		<h1>Скорее всего у вас была попытка открыть бизнес. И не одна. И возможно, вы даже открыли его.</h1>
+		<p>&nbsp;</p>
+		<p>Тогда вы точно знаете сколько сил (и физических и моральных) и денег нужно потратить на такие штуки как:</p>
+		<p>- создание сайта</p>
+		<p>- подключение прямого номера и ответы на звонки</p>
+		<p>- поиск и аренда склада</p>
+		<p>- работа с курьерами</p>
+		<p>- найм персонала</p>
+		<p>- привлечение трафика</p>
+		<p>&nbsp;</p>
+		<p>Да, со временем, при должном упорстве и запасе финансовых средств вы сложите этот пазл и пройдете бизнес-квест.
+			Мы сами это проходили, теряя месяцы и сотни тысяч рублей.</p>
+		<p>&nbsp;</p>
+		<p>Вам повезло значительно сильнее. Представляем систему от практиков, которые понимают то, с чем вы столкнулись сейчас на своем бизнес-пути.</p>
+		<p>&nbsp;</p>
+		<p>Имсайдер. Интернет-магазин под ключ - это первая в мире система открытия бизнеса, где вы получаете полный
+			набор необходимых инструментов: сайт, колл-центр с вежливыми операторами, склад и логистику, сопровождение ментора - практика, обучение и сообщество.</p>
+		<p>&nbsp;</p>
+		<p>Благодаря тому, что в систему Интернет-магазин под ключ вступают сотни человек, вы получаете все преимущества и инструменты по цене средненького сайта.</p>
+		<p>&nbsp;</p>
+		<p>Это значит, что вы экономите:</p>
+		<p>&nbsp;</p>
+		<p>- сотни часов поисков правильного пути</p>
+		<p>- десятки (а то и сотни) тысяч рублей на экспериментах с созданием сайта</p>
+		<p>- силы и нервы на прохождении различных курсов и тренингов</p>
+		<p>&nbsp;</p>
+		<p>Это значит, что вы получаете:</p>
+		<p>&nbsp;</p>
+		<p>- готовый набор инструментов для открытия интернет-бизнеса</p>
+		<p>- качественное обучение от практиков</p>
+		<p>- менторскую поддержку на время обучения</p>
+		<p>- готовый бизнес план по заработку от 100 000 р. в месяц</p>
+	</div>
+	<div class="bg-bottom"></div>
 </section>
 
-<section class="select-form-part">
-    <div class="wrap">
-        <h1 style="margin-top: -30px;">Вы уже решили, кем хотите<br />вступить в игру?</h1>
-        <div class="imsider-logo"></div>
-        <p class="counter_header">Действует раннее бронирование на специальных условиях. <strong>Цена вырастет через:</strong></p>
-        <p class="counter"></p>
-
-        <div class="form-table-wrap">
-            <table class="form-table">
-                <thead>
-                <tr>
-                    <td><div class="title">Новичок</div>
-                        <div class="price">14 900<span class="rub">i</span></div>
-                        <ul class="stars">
-                            <li class="act"></li>
-                            <li class="act"></li>
-                            <li class="act"></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <div class="clear"></div></td>
-                    <td><div class="title">VIP. Готовый бизнес.</div>
-                        <div class="price">39 900<span class="rub">i</span></div>
-                        <ul class="stars">
-                            <li class="act"></li>
-                            <li class="act"></li>
-                            <li class="act"></li>
-                            <li class="act"></li>
-                            <li class="act"></li>
-                            <li class="act"></li>
-                        </ul>
-                        <div class="clear"></div></td>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><ul>
-                            <li>Живые и онлайн (для регионов) встречи (минимум 15 занятий)</li>
-                            <li>LIVE тренинг в Москве с прямым эфиром на весь мир</li>
-                            <li>Доступ в Битву интернет-магазинов (для 10 лучших участников)</li>
-                            <li>Возможность пройти Школу интернет-магазинов в следующем потоке на льготных условиях и бесплатно в последующих (если в текущем не зафиналите по уважительной причине)</li>
-                            <li>Доступ к шаблонам дизайна<br />
-                                и рекламы, которыми будем пользоваться мы</li>
-                            <li>Готовый одностраничный сайт</li>
-                            <li>Сертификат о прохождении тренинга</li>
-                        </ul></td>
-                    <td><ul>
-                            <li class="selected">Все опции блока<br />
-                                &laquo;Новичок&raquo;</li>
-                            <li>Участие в <a href="http://intensive.imsider.ru/?ad=92146" target="_blank">Интенсиве</a> (тариф VIP)</li>
-                            <li>Дополнительные 6 занятий, где тренеры работают над вашим бизнесом</li>
-                            <li>Тактическая коучинговая сессия с Николаем Федоткиным</li>
-                            <li>Поддержка тренеров по e-mail в течение года</li>
-                            <li>Возможность посещения офисов наших интернет-магазинов с изучением всех бизнес-процессов</li>
-                            <li> Городской московский номер, на который Ваши клиенты смогут звонить Вам</li>
-                            <li>500 минут  работы Call Center по обработке Ваших заказов с возможностью	                продления</li>
-                            <li>Склад для хранения Ваших товаров</li>
-                            <li>Упаковка и доставка Ваших товаров</li>
-                            <li>Сертификат о прохождении тренинга</li>
-                        </ul></td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td><div class="goal">
-                            <p>Цель:</p>
-                            <p class="value">100 000+ руб</p>
-                        </div>
-                        <a href="http://imsider.justclick.ru/order/business_pod_kluch-novichok/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
-                    <td><div class="goal">
-                            <p>Цель:</p>
-                            <p class="value">300 000+ руб</p>
-                        </div>
-                        <a href="http://imsider.justclick.ru/order/businiess_pod_kluch-VIP/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес под ключ</a></td>
-                </tr>
-                </tfoot>
-            </table>
-        </div>
-        <div class="agreement">
-            <label>
-                <!--input type="checkbox"-->Нажимая кнопку Участвовать или Победить, вы принимаете условия <a href="http://imsider.ru/wppage/publichnyiy-dogovor-oferta-po-okazaniyu-informatsionno-konsultativnyih-uslug/" target="_blank">Договора-оферты</a>
-            </label>
-        </div>
-    </div>
-</section>
+<?= selectBlock("Вы уже решили, кем хотите<br />вступить в игру?") ?>
 
 <section class="leaderboard">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h1>Кейсы и отзывы некоторых участников системы Интернет-магазин под ключ</h1>
 		<table>
@@ -330,8 +250,8 @@
 				<td colspan="5">
 					<div class="hidden-wrap">
 						<div class="video" data-videoId="AW-Zebt7c0M">
-                            <img src="img/video_big.jpg" width="440" height="248">
-                        </div>
+							<img src="img/video_big.jpg" width="440" height="248">
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -351,9 +271,9 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-                        <div class="video" data-videoId="5JMGDdFlHLg">
-                            <img src="img/video_big.jpg" width="440" height="248">
-                        </div>
+						<div class="video" data-videoId="5JMGDdFlHLg">
+							<img src="img/video_big.jpg" width="440" height="248">
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -374,9 +294,9 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-                        <div class="video" data-videoId="mXV6AU6BwA4">
-                            <img src="img/video_big.jpg" width="440" height="248">
-                        </div>
+						<div class="video" data-videoId="mXV6AU6BwA4">
+							<img src="img/video_big.jpg" width="440" height="248">
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -397,9 +317,9 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-                        <div class="video" data-videoId="wqbe3fvn-tE">
-                            <img src="img/video_big.jpg" width="440" height="248">
-                        </div>
+						<div class="video" data-videoId="wqbe3fvn-tE">
+							<img src="img/video_big.jpg" width="440" height="248">
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -420,9 +340,9 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-                        <div class="video" data-videoId="CL8XmILXVTY">
-                            <img src="img/video_big.jpg" width="440" height="248">
-                        </div>
+						<div class="video" data-videoId="CL8XmILXVTY">
+							<img src="img/video_big.jpg" width="440" height="248">
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -443,9 +363,9 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-                        <div class="video" data-videoId="5h_5uef9SAg">
-                            <img src="img/video_big.jpg" width="440" height="248">
-                        </div>
+						<div class="video" data-videoId="5h_5uef9SAg">
+							<img src="img/video_big.jpg" width="440" height="248">
+						</div>
 					</div>
 				</td>
 			</tr>
@@ -462,7 +382,7 @@
 			</tr>
 		</table>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <section class="get-book">
@@ -522,20 +442,20 @@
 			<img src="img/logos/russia24.png" class="russia24 logo" width="150" height="42">
 		</div>
 
-        <p>
-            &mdash; Без технических знаний<br />
-            &mdash; Без опыта в бизнесе<br />
-            &mdash; Без навыков продаж<br />
-            С таким &laquo;комплектом начинающего бизнесмена&raquo; сделали первые шаги в бизнесе практически<br />все участники бизнес-системы Имсайдера.
-        </p>
+		<p>
+			&mdash; Без технических знаний<br />
+			&mdash; Без опыта в бизнесе<br />
+			&mdash; Без навыков продаж<br />
+			С таким &laquo;комплектом начинающего бизнесмена&raquo; сделали первые шаги в бизнесе практически<br />все участники бизнес-системы Имсайдера.
+		</p>
 
-        <p>Кстати, многие секреты и фишки мы раскрыли в книге Планета Продаж, которая только<br />готовится к изданию. А вы можете скачать ее прямо сейчас, чтобы максимально качественно<br />подготовиться к запуску своего нового бизнеса.</p>
+		<p>Кстати, многие секреты и фишки мы раскрыли в книге Планета Продаж, которая только<br />готовится к изданию. А вы можете скачать ее прямо сейчас, чтобы максимально качественно<br />подготовиться к запуску своего нового бизнеса.</p>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <section class="why-it-works">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h1 class="purple">Почему система &laquo;Имсайдер. Интернет-магазин под ключ&raquo; работает?</h1>
 
@@ -571,11 +491,11 @@
 		<p>Во многих тренингах большинство учеников ориентируется на процесс. Применяя систему &laquo;Имсайдер. Готовый бизнес под ключ&raquo; вы будете исходить из результата. Который не заставит себя ждать.</p>
 
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <section class="learning-process">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h1>Как происходит обучение</h1>
 		<div class="icons"></div>
@@ -591,98 +511,13 @@
 			<div class="step-8">PROFIT</div>
 		</div>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
-<section class="select-form-part">
-	<div class="wrap">
-		<h1>Уже решили что вам нужно?</h1>
-		<div class="imsider-logo"></div>
-		<p class="counter_header">Действует раннее бронирование на специальных условиях. <strong>Цена вырастет через:</strong></p>
-		<p class="counter"></p>
-
-		<div class="form-table-wrap">
-		    <table class="form-table">
-		      <thead>
-		        <tr>
-		          <td><div class="title">Новичок</div>
-		            <div class="price">14 900<span class="rub">i</span></div>
-		            <ul class="stars">
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li></li>
-		              <li></li>
-		              <li></li>
-	                </ul>
-		            <div class="clear"></div></td>
-		          <td><div class="title">VIP. Готовый бизнес.</div>
-		            <div class="price">39 900<span class="rub">i</span></div>
-		            <ul class="stars">
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-	                </ul>
-		            <div class="clear"></div></td>
-	            </tr>
-	          </thead>
-		      <tbody>
-		        <tr>
-		          <td><ul>
-		            <li>Живые и онлайн (для регионов) встречи (минимум 15 занятий)</li>
-		            <li>LIVE тренинг в Москве с прямым эфиром на весь мир</li>
-		            <li>Доступ в Битву интернет-магазинов (для 10 лучших участников)</li>
-		            <li>Возможность пройти Школу интернет-магазинов в следующем потоке на льготных условиях и бесплатно в последующих (если в текущем не зафиналите по уважительной причине)</li>
-		            <li>Доступ к шаблонам дизайна<br />
-		              и рекламы, которыми будем пользоваться мы</li>
-		            <li>Готовый одностраничный сайт</li>
-		            <li>Сертификат о прохождении тренинга</li>
-		            </ul></td>
-		          <td><ul>
-		            <li class="selected">Все опции блока<br />
-		              &laquo;Новичок&raquo;</li>
-		            <li>Участие в <a href="http://intensive.imsider.ru/?ad=92146" target="_blank">Интенсиве</a> (тариф VIP)</li>
-		            <li>Дополнительные 6 занятий, где тренеры работают над вашим бизнесом</li>
-		            <li>Тактическая коучинговая сессия с Николаем Федоткиным</li>
-		            <li>Поддержка тренеров по e-mail в течение года</li>
-		            <li>Возможность посещения офисов наших интернет-магазинов с изучением всех бизнес-процессов</li>
-		            <li> Городской московский номер, на который Ваши клиенты смогут звонить Вам</li>
-		            <li>500 минут  работы Call Center по обработке Ваших заказов с возможностью	                продления</li>
-		            <li>Склад для хранения Ваших товаров</li>
-		            <li>Упаковка и доставка Ваших товаров</li>
-		            <li>Сертификат о прохождении тренинга</li>
-		            </ul></td>
-	            </tr>
-	          </tbody>
-		      <tfoot>
-		        <tr>
-		          <td><div class="goal">
-		            <p>Цель:</p>
-		            <p class="value">100 000+ руб</p>
-		            </div>
-		            <a href="http://imsider.justclick.ru/order/business_pod_kluch-novichok/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
-		          <td><div class="goal">
-		            <p>Цель:</p>
-		            <p class="value">300 000+ руб</p>
-		            </div>
-		            <a href="http://imsider.justclick.ru/order/businiess_pod_kluch-VIP/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес под ключ</a></td>
-	            </tr>
-	          </tfoot>
-	        </table>
-	      </div>
-		<div class="agreement">
-			<label>
-				<!--input type="checkbox"-->Нажимая кнопку Открыть бизнес или Открыть бизнес под ключ, вы принимаете условия <a href="http://imsider.ru/wppage/publichnyiy-dogovor-oferta-po-okazaniyu-informatsionno-konsultativnyih-uslug/" target="_blank">Договора-оферты</a>
-			</label>
-		</div>
-	</div>
-</section>
+<?= selectBlock("Уже решили что вам нужно?") ?>
 
 <section class="seriousness">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h1>Кстати, мы привыкли работать<br />с серьезными людьми</h1>
 
@@ -725,7 +560,7 @@
 			</div>
 		</div>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <a name="scroll-3"></a>
@@ -842,7 +677,7 @@
 </section>
 
 <section class="for-monsters">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h1>Для монстров</h1>
 		<h2>Коучинговый месяц &laquo;Усиление&raquo;. Серьезные задачи.</h2>
@@ -856,11 +691,11 @@
 		</div>
 		<div class="clear"></div>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
 <section class="reviews">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h1>Отзывы наших учеников</h1>
 		<p>Минут на 10 нам нужно погрузиться в полную тишину, чтобы не пропустить ни одной фишки из историй успеха наших учеников.</p>
@@ -870,17 +705,17 @@
 				<div class="col-item bg-25">
 					<div class="name">Екатерина Никерова</div>
 					<a href="http://taoli.ru" target="_blank">taoli.ru</a>
-                    <div class="video" data-videoId="9_3OQkFmEEI">
-                        <img src="img/video.jpg" width="300" height="200">
-                    </div>
+					<div class="video" data-videoId="9_3OQkFmEEI">
+						<img src="img/video.jpg" width="300" height="200">
+					</div>
 					<p>До тренинга у меня не было<br />ни одного интернет-магазина, теперь их уже 3. Вышли на<br />оборот значительно больше<br />100 000<span class="rub">i</span></p>
 				</div>
 				<div class="col-item bg-26">
 					<div class="name">Владимир Штрайхерт</div>
 					<a href="http://ru-mag.ru" target="_blank">ru-mag.ru</a>
-                    <div class="video" data-videoId="6Ep1sCRtxUE">
-                        <img src="img/video.jpg" width="300" height="200">
-                    </div>
+					<div class="video" data-videoId="6Ep1sCRtxUE">
+						<img src="img/video.jpg" width="300" height="200">
+					</div>
 					<p class="big last">Интернет-магазин был создан на тренинге, сейчас его конверсия составляет 5%</p>
 				</div>
 			</div>
@@ -888,18 +723,18 @@
 				<div class="col-item bg-27">
 					<div class="name">Мария Белякова</div>
 					<a href="http://vsenamestax.ru" target="_blank">vsenamestax.ru</a>
-                    <div class="video" data-videoId="n19nd8NQa5c">
-                        <img src="img/video.jpg" width="300" height="200">
-                    </div>
+					<div class="video" data-videoId="n19nd8NQa5c">
+						<img src="img/video.jpg" width="300" height="200">
+					</div>
 					<p class="big-2">За время тренинга оборот вырос<br />на 65%</p>
 				</div>
 				<div class="col-item bg-28">
 					<div class="name">Андрей</div>
 					<a href="http://www.chopochom.com" target="_blank">www.chopochom.com</a>
 
-                    <div class="video" data-videoId="V1_kkj8khnY">
-                        <img src="img/video.jpg" width="300" height="200">
-                    </div>
+					<div class="video" data-videoId="V1_kkj8khnY">
+						<img src="img/video.jpg" width="300" height="200">
+					</div>
 					<p class="big last">После курсов, практически не вкладываясь, обеспечили себе постоянные продажи</p>
 				</div>
 			</div>
@@ -907,114 +742,29 @@
 				<div class="col-item bg-25">
 					<div class="name">Светлана Гарина</div>
 					<a href="http://kinderama.ru" target="_blank">kinderama.ru</a>
-                    <div class="video" data-videoId="cIz49eCUCBw">
-                        <img src="img/video.jpg" width="300" height="200">
-                    </div>
+					<div class="video" data-videoId="cIz49eCUCBw">
+						<img src="img/video.jpg" width="300" height="200">
+					</div>
 					<p>Вышли на средний объем &mdash; 10 заказов в день со средним<br />чеком от 1000 до 8000<span class="rub">i</span></p>
 				</div>
 				<div class="col-item bg-26">
 					<div class="name">Морозов Сергей</div>
 					<a href="http://siammart.ru" target="_blank">siammart.ru</a>
-                    <div class="video" data-videoId="3aV5Ma7cQGw">
-                        <img src="img/video.jpg" width="300" height="200">
-                    </div>
+					<div class="video" data-videoId="3aV5Ma7cQGw">
+						<img src="img/video.jpg" width="300" height="200">
+					</div>
 					<p class="last" style="margin-top: -5px;">До тренинга наш магазин нахо-<br />дился в инертном состоянии, дальше определенной планки сдвинуться не могли. Сейчас, после обучения, рассчитываем повысить продажи в 2-3 раза.</p>
 				</div>
 			</div>
 		</div>
 	</div>
-    <div class="bg-bottom"></div>
+	<div class="bg-bottom"></div>
 </section>
 
-<section class="select-form-part">
-	<div class="wrap">
-		<h1>Действуйте прямо сейчас</h1>
-		<div class="imsider-logo"></div>
-		<p class="counter_header">Действует раннее бронирование на специальных условиях. <strong>Цена вырастет через:</strong></p>
-		<p class="counter"></p>
-
-		<div class="form-table-wrap">
-		    <table class="form-table">
-		      <thead>
-		        <tr>
-		          <td><div class="title">Новичок</div>
-		            <div class="price">14 900<span class="rub">i</span></div>
-		            <ul class="stars">
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li></li>
-		              <li></li>
-		              <li></li>
-	                </ul>
-		            <div class="clear"></div></td>
-		          <td><div class="title">VIP. Готовый бизнес.</div>
-		            <div class="price">39 900<span class="rub">i</span></div>
-		            <ul class="stars">
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-		              <li class="act"></li>
-	                </ul>
-		            <div class="clear"></div></td>
-	            </tr>
-	          </thead>
-		      <tbody>
-		        <tr>
-		          <td><ul>
-		            <li>Живые и онлайн (для регионов) встречи (минимум 15 занятий)</li>
-		            <li>LIVE тренинг в Москве с прямым эфиром на весь мир</li>
-		            <li>Доступ в Битву интернет-магазинов (для 10 лучших участников)</li>
-		            <li>Возможность пройти Школу интернет-магазинов в следующем потоке на льготных условиях и бесплатно в последующих (если в текущем не зафиналите по уважительной причине)</li>
-		            <li>Доступ к шаблонам дизайна<br />
-		              и рекламы, которыми будем пользоваться мы</li>
-		            <li>Готовый одностраничный сайт</li>
-		            <li>Сертификат о прохождении тренинга</li>
-		            </ul></td>
-		          <td><ul>
-		            <li class="selected">Все опции блока<br />
-		              &laquo;Новичок&raquo;</li>
-		            <li>Участие в <a href="http://intensive.imsider.ru/?ad=92146" target="_blank">Интенсиве</a> (тариф VIP)</li>
-		            <li>Дополнительные 6 занятий, где тренеры работают над вашим бизнесом</li>
-		            <li>Тактическая коучинговая сессия с Николаем Федоткиным</li>
-		            <li>Поддержка тренеров по e-mail в течение года</li>
-		            <li>Возможность посещения офисов наших интернет-магазинов с изучением всех бизнес-процессов</li>
-		            <li> Городской московский номер, на который Ваши клиенты смогут звонить Вам</li>
-		            <li>500 минут  работы Call Center по обработке Ваших заказов с возможностью	                продления</li>
-		            <li>Склад для хранения Ваших товаров</li>
-		            <li>Упаковка и доставка Ваших товаров</li>
-		            <li>Сертификат о прохождении тренинга</li>
-		            </ul></td>
-	            </tr>
-	          </tbody>
-		      <tfoot>
-		        <tr>
-		          <td><div class="goal">
-		            <p>Цель:</p>
-		            <p class="value">100 000+ руб</p>
-		            </div>
-		            <a href="http://imsider.justclick.ru/order/business_pod_kluch-novichok/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
-		          <td><div class="goal">
-		            <p>Цель:</p>
-		            <p class="value">300 000+ руб</p>
-		            </div>
-		            <a href="http://imsider.justclick.ru/order/businiess_pod_kluch-VIP/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес под ключ</a></td>
-	            </tr>
-	          </tfoot>
-	        </table>
-	      </div>
-		<div class="agreement">
-			<label>
-				<!--input type="checkbox"-->Нажимая кнопку Открыть бизнес или Открыть бизнес под ключ, вы принимаете условия <a href="http://imsider.ru/wppage/publichnyiy-dogovor-oferta-po-okazaniyu-informatsionno-konsultativnyih-uslug/" target="_blank">Договора-оферты</a>
-			</label>
-		</div>
-	</div>
-</section>
+<?= selectBlock("Действуйте прямо сейчас") ?>
 
 <section class="footer">
-    <div class="bg-top"></div>
+	<div class="bg-top"></div>
 	<div class="wrap">
 		<h3>Есть вопросы?</h3>
 		<div class="phone">
@@ -1134,94 +884,101 @@
 </div>
 
 <div id="preload">
-    <!--script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery.formstyler.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/jquery.countdown-ru.js"></script>
-    <script src="js/jquery.reject.js"></script>
-    <script src="js/jquery.activity.min.js"></script>
-    <script src="js/social-likes.min.js"></script>
-    <script src="js/main.js"></script-->
-    <?php
-    $js= Array();
-    foreach (glob('js/*.js') as $filename) {array_push($js, substr($filename, 3));}
-    ?>
-    <script type="text/javascript" src="combiner/?type=javascript&files=<?= implode(",", $js) ?>"></script>
-    <!-- дата и время для счетчика -->
-    <script>
-        var counter_time_left = <?=$diff;?>;
-    </script>
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<!--script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/jquery.formstyler.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="js/jquery.countdown.js"></script>
+	<script src="js/jquery.countdown-ru.js"></script>
+	<script src="js/jquery.reject.js"></script>
+	<script src="js/jquery.activity.min.js"></script>
+	<script src="js/social-likes.min.js"></script>
+	<script src="js/main.js"></script-->
+<?
+	$js = array();
+	foreach (glob('js/*.js') as $filename) {
+		array_push($js, substr($filename, 3));
+	}
+?>
+	<script type="text/javascript" src="combiner/?type=javascript&files=<?= implode(",", $js) ?>"></script>
 
-        ga('create', 'UA-29022975-1', 'imsider.ru');
-        ga('send', 'pageview');
+	<!-- дата и время для счетчика -->
+	<script>
+		var counter_time_left = <?=$diff;?>;
+	</script>
 
-    </script>
-    <!-- / Google Analytics -->
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter12922898 = new Ya.Metrika({id:12922898,
-                        webvisor:true,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true});
-                } catch(e) { }
-            });
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+		ga('create', 'UA-29022975-1', 'imsider.ru');
+		ga('send', 'pageview');
 
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="//mc.yandex.ru/watch/12922898" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
-    <!-- / Yandex.Metrika counter -->
-    <!-- Oh My Stats tracking code -->
-    <script type="text/javascript">
-        //<![CDATA[
-        var _oms = window._oms || [];
+	</script>
+	<!-- / Google Analytics -->
 
-        _oms.push(["set_project_id", "atlfqdjiipmbpuiwguywuqdbunemyzoojqujvlpp"]);
-        _oms.push(["set_domain", ".imsider.ru"]);
-        (function() {
-            var oms = document.createElement("script");
-            oms.type = "text/javascript";
-            oms.async = true;
-            oms.src = "//ohmystats.com/oms.js";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(oms, s);
-        })();
-        //]]>
-    </script>
-    <!-- / Oh My Stats tracking code -->
-    <!-- GetResponse tracking code -->
-    <script type="text/javascript">
-        var gr_goal_params = {
-            param_0 : '',
-            param_1 : '',
-            param_2 : '',
-            param_3 : '',
-            param_4 : '',
-            param_5 : ''
-        };</script>
-    <script type="text/javascript" src="https://app.getresponse.com/goals_log.js?p=42604&u=SwZy"></script>
-    <!-- / GetResponse tracking code -->
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter12922898 = new Ya.Metrika({id:12922898,
+						webvisor:true,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="//mc.yandex.ru/watch/12922898" style="position:absolute; left:-9999px;" alt=""/></div></noscript>
+	<!-- / Yandex.Metrika counter -->
+
+	<!-- Oh My Stats tracking code -->
+	<script type="text/javascript">
+		//<![CDATA[
+		var _oms = window._oms || [];
+
+		_oms.push(["set_project_id", "atlfqdjiipmbpuiwguywuqdbunemyzoojqujvlpp"]);
+		_oms.push(["set_domain", ".imsider.ru"]);
+		(function() {
+			var oms = document.createElement("script");
+			oms.type = "text/javascript";
+			oms.async = true;
+			oms.src = "//ohmystats.com/oms.js";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(oms, s);
+		})();
+		//]]>
+	</script>
+	<!-- / Oh My Stats tracking code -->
+
+	<!-- GetResponse tracking code -->
+	<script type="text/javascript">
+		var gr_goal_params = {
+			param_0 : '',
+			param_1 : '',
+			param_2 : '',
+			param_3 : '',
+			param_4 : '',
+			param_5 : ''
+		};</script>
+	<script type="text/javascript" src="https://app.getresponse.com/goals_log.js?p=42604&u=SwZy"></script>
+	<!-- / GetResponse tracking code -->
 </div>
 </body>
 </html>
