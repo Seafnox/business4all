@@ -17,9 +17,8 @@
 
 	// -- цикличный счетчик
     $now = time();
-	$interval = 48 * 60 * 60; // счетчик выставляется на 2 дня вперед от текущей даты
-
-	if (isset($_COOKIE['time_start']) && $_COOKIE['time_start'] > $now - $interval)
+	$interval = 48 * 60 * 60;
+	if(isset($_COOKIE['time_start']) && $_COOKIE['time_start'] > $now - $interval)
 		$diff = $_COOKIE['time_start'] + $interval - $now;
 	else {
 		$diff = $interval;
@@ -28,15 +27,13 @@
 	// --
 
 	// -- счетчик на фиксированную дату
-/*	$date2 = '2014-05-29 18:59:59'; // дата и время для счетчика
+/*	$date2 = '2014-04-29 18:59:59'; // дата и время для счетчика
 	$date1 = 'now';
 
-	$diff2 = strtotime($date2) - strtotime($date1); // разница в секундах
-	if ($diff2 < 0) $diff2 = 0;*/
+	$diff = strtotime($date2) - strtotime($date1); // разница в секундах
+	if ($diff < 0) $diff = 0;*/
 	// --
-
-    $counter = round($diff / 60 / 60 / 24); // округляем дни для блока вывода дней
-    require_once("select-form-part.php");
+    include_once("select-form-part.php");
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -45,9 +42,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="img/icons/ico16.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/ico144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="64x64" href="img/icons/ico64.png">
-
-	<title>Интернет-магазин под ключ | Бизнес-школа Имсайдер</title>
-
+	<title>Интернет-магазин | Оффлайн-бизнес | Инвестирование</title>
 	<link href='http://fonts.googleapis.com/css?family=Russo+One:400&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic&subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic&subset=cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
@@ -72,7 +67,7 @@
 	<div class="wrap">
 		<div class="current_date">16 июня</div>
 		<div class="online-store-from-scratch">
-			<span class="key">Интернет-магазин под ключ</span>
+			<span class="key">Новый бизнес под ключ</span>
 			<br>
 			<span class="key_info">Система быстрого открытия интернет-магазина<br> и бизнес-обучения в одном флаконе.</span>
 			<br>
@@ -102,12 +97,18 @@
 <section class="video_block">
 	<a name="scroll-1"></a>
 	<div class="wrap">
-		<h1>Реалити. Готовый интернет-магазин под ключ. Причины пойти</h1>
+		<h1>Бизнес под ключ. Причины пойти</h1>
 		<p>&nbsp;</p>
 		<div class="video-wrap">
 			<div class="video" data-videoId="mKtlReCKeNU">
-				<img src="img/video/Создай%20свой%20бизнес%20с%20нуля.jpg" width="850" height="480">
+				<img src="img/video_large.jpg" width="853" height="480">
 			</div>
+		</div>
+		<div class="social">
+			<ul class="social-likes">
+				<li class="vkontakte" title="Поделиться ссылкой Вконтакте">Вконтакте</li>
+				<li class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</li>
+			</ul>
 		</div>
 		<div class="slide_link">
 			<a href="#slide_more" class="btn">Узнать больше</a>
@@ -134,10 +135,10 @@
 		<p>&nbsp;</p>
 		<p>Вам повезло значительно сильнее. Представляем систему от практиков, которые понимают то, с чем вы столкнулись сейчас на своем бизнес-пути.</p>
 		<p>&nbsp;</p>
-		<p>Имсайдер. Интернет-магазин под ключ - это первая в мире система открытия бизнеса, где вы получаете полный
+		<p>Имсайдер. Бизнес под ключ - это первая в мире система открытия бизнеса, где вы получаете полный
 			набор необходимых инструментов: сайт, колл-центр с вежливыми операторами, склад и логистику, сопровождение ментора - практика, обучение и сообщество.</p>
 		<p>&nbsp;</p>
-		<p>Благодаря тому, что в систему Интернет-магазин под ключ вступают сотни человек, вы получаете все преимущества и инструменты по цене средненького сайта.</p>
+		<p>Благодаря тому, что в систему Бизнес под ключ вступают сотни человек, вы получаете все преимущества и инструменты по цене средненького сайта.</p>
 		<p>&nbsp;</p>
 		<p>Это значит, что вы экономите:</p>
 		<p>&nbsp;</p>
@@ -155,7 +156,7 @@
 	<div class="bg-bottom"></div>
 </section>
 
-<?= selectBlock("Вы уже решили, кем хотите<br />вступить в игру?",$counter) ?>
+<?= selectBlock("Вы уже решили, кем хотите<br />вступить в игру?") ?>
 
 <section class="leaderboard">
 	<div class="bg-top"></div>
@@ -249,7 +250,7 @@
 				<td colspan="5">
 					<div class="hidden-wrap">
 						<div class="video" data-videoId="AW-Zebt7c0M">
-							<img src="img/video/Андрей%20Манько.jpg" width="440" height="250">
+							<img src="img/video_big.jpg" width="440" height="248">
 						</div>
 					</div>
 				</td>
@@ -259,20 +260,20 @@
 					<div>5</div>
 				</td>
 				<td class="leader">
-					<div class="name">Игорь Минтусов</div>
+					<div class="name">Роман Субботинов</div>
 				</td>
-				<td>Купонные сайты</td>
+				<td>Интернет-магазин<br>покрасочных камер</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
-				<td class="money small">500 000 <span class="rub">i</span></td>
+				<td class="money small">600 000 <span class="rub">i</span></td>
 			</tr>
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="5JMGDdFlHLg">
-							<img src="img/video/Игорь%20Минтусов.jpg" width="440" height="250">
-						</div>
+						<div class="video" data-videoId="W1oVXEpYE4w">
+                        <img src="img/video_big.jpg" width="440" height="248">
+                        </div>
 					</div>
 				</td>
 			</tr>
@@ -281,10 +282,11 @@
 					<div>6</div>
 				</td>
 				<td class="leader">
-					<div class="name">Антон Бочкарев</div>
-				   <a href="http://agroboom.ru" class="link">agroboom.ru</a>
+					<div class="name">Игорь Басимов</div>
+				   <a href="http://progps-rus.ru" class="link">progps-rus.ru</a>
 				</td>
-				<td>Интернет-магазин<br />агро товаров</td>
+				<td>Интернет-магазин<br />
+				навигаторов</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
@@ -293,8 +295,8 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="mXV6AU6BwA4">
-							<img src="img/video/Антон%20Бочкарев.jpg" width="440" height="250">
+						<div class="video" data-videoId="EFtZaNh97m8">
+							<img src="img/video_big.jpg" width="440" height="248">
 						</div>
 					</div>
 				</td>
@@ -304,10 +306,10 @@
 					<div>7</div>
 				</td>
 				<td class="leader">
-					<div class="name">Татьяна Сушкова</div>
-				   <a href="http://www.myxmas.ru" class="link">www.myxmas.ru</a>
+					<div class="name">Леван Гонгадзе </div>
 				</td>
-				<td>Интернет-магазин<br />новогодних товаров</td>
+				<td>Интернет-магазин<br />
+				рюкзаков</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
@@ -316,8 +318,8 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="wqbe3fvn-tE">
-							<img src="img/video/Татьяна%20Сушкова.jpg" width="440" height="250">
+						<div class="video" data-videoId="JPCLA8kjATM">
+							<img src="img/video_big.jpg" width="440" height="248">
 						</div>
 					</div>
 				</td>
@@ -340,7 +342,7 @@
 				<td colspan="5">
 					<div class="hidden-wrap">
 						<div class="video" data-videoId="CL8XmILXVTY">
-							<img src="img/video/Андрей%20Глушаня.jpg" width="440" height="250">
+							<img src="img/video_big.jpg" width="440" height="248">
 						</div>
 					</div>
 				</td>
@@ -350,20 +352,21 @@
 					<div>9</div>
 				</td>
 				<td class="leader">
-					<div class="name">Илья Мусатов</div>
-				   <a href="http://lensday.ru" class="link">lensday.ru</a>
+					<div class="name">Антон Черновский</div>
+				   <a href="http://akb.4fe.ru" class="link">akb.4fe.ru</a>
 				</td>
-				<td>Интернет-магазин<br />очков</td>
+				<td>Интернет-магазин<br />
+				аккумуляторов</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
-				<td class="money small">+50% прибыль</td>
+				<td class="money small">200 000 <span class="rub">i</span></td>
 			</tr>
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="5h_5uef9SAg">
-							<img src="img/video/Илья%20Мусатов.jpg" width="440" height="250">
+						<div class="video" data-videoId="VtlRVoJrxTY">
+							<img src="img/video_big.jpg" width="440" height="248">
 						</div>
 					</div>
 				</td>
@@ -386,9 +389,10 @@
 
 <section class="get-book">
 	<div class="wrap">
-		<h1>Авторы системы &laquo;Имсайдер. Готовый бизнес под ключ&raquo;</h1>
+		<h1>Вы будете идти к результату с практиками</h1>
 
-		<p>Cовладельцы интернет-магазинов <a href="http://deoshop.ru" target="_blank">Deoshop.ru</a>, <a href="http://kupitalon.ru" target="_blank">Кupitalon.ru</a>, <a href="http://video-shoper.ru/" target="_blank">video-shoper.ru</a> и других бизнесов с оборотом более 100 млн руб в месяц</p>
+		<p>Владельцы интернет-магазинов <a href="http://deoshop.ru" target="_blank">Deoshop.ru</a>, <a href="http://kupitalon.ru" target="_blank">Кupitalon.ru</a>, <a href="http://video-shoper.ru/" target="_blank">video-shoper.ru</a> и других бизнесов с оборотом более 100 млн руб в месяц</p>
+		<p>Особо радует то, что в Бизнесе под ключ участников не нужно "пинать". Это не тренинг в стиле "концлагерь". Начинающие предприниматели смотрят на результаты друг друга, на то, как открываем бизнесы мы в прямом эфире и просто не могут не действовать.</p>
 
 		<div class="co-owners">
 			<div class="col col-1">
@@ -399,7 +403,7 @@
 					<div class="name">Сергей<br />Балакирев</div>
 					<div class="about">
 						<p>Автор &laquo;Формулы быстрого старта интернет-магазинов&raquo;, совладелец действующих интернет-бизнесов.</p>
-						<p>Основной проект &mdash; Deoshop.ru</p>
+						<p>Основной проект &mdash; Deoshop.ru, один из лидеров рынка нишевой косметики.</p>
 					</div>
 				</div>
 			</div>
@@ -411,7 +415,7 @@
 					<div class="name">Тимур<br />Шаков</div>
 					<div class="about">
 						<p>Основатель действующих интернет-проектов с общим оборотом более 2 млн. долларов в год, совладелец действующих<br />интернет-бизнесов.</p>
-						<p>Основной проект &mdash; Deoshop.ru, один из лидеров </p>
+						<p>Основной проект &mdash; Deoshop.ru, один из лидеров рынка нишевой косметики.</p>
 					</div>
 				</div>
 			</div>
@@ -456,10 +460,10 @@
 <section class="why-it-works">
 	<div class="bg-top"></div>
 	<div class="wrap">
-		<h1 class="purple">Почему система &laquo;Имсайдер. Интернет-магазин под ключ&raquo; работает?</h1>
+		<h1 class="purple">Почему система &laquo;Имсайдер. Бизнес под ключ&raquo; работает?</h1>
 
 		<p>Наши методики действительно работают — это легко подтверждают истории наших учеников.<br />Но как и почему они работают? В чем их отличие от огромного количества тренингов из<br />разряда &laquo;быстрые деньги&raquo;?</p>
-		<p><span class="pink">Вот как минимум 4 причины</span>, почему вы можете быть уверены в том, что Реалити. Интернет-магазин под ключ поможет вам зарабатывать хорошие деньги:</p>
+		<p><span class="pink">Вот как минимум 4 причины</span>, почему вы можете быть уверены в том, что Бизнес под ключ поможет вам зарабатывать хорошие деньги:</p>
 
 		<div class="reason">
 		  <div class="icon icon-1"></div>
@@ -487,7 +491,7 @@
 
 		<div class="clear"></div>
 
-		<p>Во многих тренингах большинство учеников ориентируется на процесс. Применяя систему &laquo;Имсайдер. Готовый бизнес под ключ&raquo; вы будете исходить из результата. Который не заставит себя ждать.</p>
+		<p>Во многих тренингах большинство учеников ориентируется на процесс. Применяя систему &laquo;Имсайдер. Бизнес под ключ&raquo; вы будете исходить из результата. Который не заставит себя ждать.</p>
 
 	</div>
 	<div class="bg-bottom"></div>
@@ -502,7 +506,7 @@
 		<div class="texts">
 			<div class="step-1">Вы выписываете<br />и оплачиваете счет</div>
 			<div class="step-2">Мы вносим вас в список<br />участников</div>
-			<div class="step-3">За 5-7 дней до начала тренинга вы<br />получаете уведомление на e-mail и sms<br />о начале. Также вы в любой момент<br />можете задать вопросы в клиентский<br />отдел</div>
+			<div class="step-3">За 3-4 дня до начала тренинга вы<br />получаете уведомление на e-mail и sms<br />о начале. Также вы в любой момент<br />можете задать вопросы в клиентский<br />отдел</div>
 			<div class="step-4">Ваш результат</div>
 			<div class="step-5">Два живых тренинга<br />в Москве с LIVE трансляциями<br />на весь мир</div>
 			<div class="step-6">Онлайн-занятия по вечерам<br />(в 19:30 или 21:00 мск) — с доступом<br />к личному кабинету с местом для<br />отчетов, записями и тезисами занятий<br />и доступом к закрытой группе в VK</div>
@@ -513,7 +517,7 @@
 	<div class="bg-bottom"></div>
 </section>
 
-<?= selectBlock("Уже решили что вам нужно?",$counter) ?>
+<?= selectBlock("Уже решили что вам нужно?") ?>
 
 <section class="seriousness">
 	<div class="bg-top"></div>
@@ -670,6 +674,27 @@
 				</div>
 			</div>
 		</div>
+        
+        <div class="table">
+			<div class="header pink-bg">Модуль 4</div>
+			<div class="body">
+				<div class="medal medal-3">
+					<strong>Получите знак отличия:</strong>
+					<div class="hr"></div>
+					<p>На пути к миллиону</p>
+				</div>
+				<div class="content">
+					<strong>Оффлайн-бизнес и инвестирование:</strong>
+					<ul>
+						<li>Как открыть оффлайн-бизнес без вложений</li>
+						<li>В какие ниши стоит вкладываться</li>
+						<li>Как купить бизнес</li>
+						<li>Как продать бизнес</li>
+						<li>Как привлечь инвесторов в свой бизнес</li>
+					</ul>	
+			  </div>
+			</div>
+		</div>
 
 		<div class="footer">После каждой недели мы проводим мини-экзамен, прохождение которого гарантирует пропуск<br />на следующий этап обучения и бонусные касты.</div>
 	</div>
@@ -702,20 +727,21 @@
 		<div class="cols">
 			<div class="col">
 				<div class="col-item bg-25">
-					<div class="name">Екатерина Никерова</div>
-					<a href="http://taoli.ru" target="_blank">taoli.ru</a>
-					<div class="video" data-videoId="9_3OQkFmEEI">
-						<img src="img/video/taoli.ru.jpg" width="300" height="200">
+					<div class="name">Ольга Серякова</div>
+                    <a href="http://искатель.дляпрофи.рф/">искатель.дляпрофи.рф</a> 
+					
+				  <div class="video" data-videoId="kyp9u9qPDzU">
+						<img src="img/video.jpg" width="300" height="200">
 					</div>
-					<p>До тренинга у меня не было<br />ни одного интернет-магазина, теперь их уже 3. Вышли на<br />оборот значительно больше<br />100 000<span class="rub">i</span></p>
+					<p>За полтора месяца работы чистая прибыль составила 250 000 <span class="rub">i</span></p>
 				</div>
 				<div class="col-item bg-26">
-					<div class="name">Владимир Штрайхерт</div>
-					<a href="http://ru-mag.ru" target="_blank">ru-mag.ru</a>
-					<div class="video" data-videoId="6Ep1sCRtxUE">
-						<img src="img/video/ru-mag.ru.jpg" width="300" height="200">
+					<div class="name">Сергей Монастырский</div>
+					<a href="http://gps-radar.ru/" target="_blank">gps-radar.ru/</a>
+					<div class="video" data-videoId="PkYhcPtEQ6g">
+						<img src="img/video.jpg" width="300" height="200">
 					</div>
-					<p class="big last">Интернет-магазин был создан на тренинге, сейчас его конверсия составляет 5%</p>
+					<p class="big last">Прибыль поднялась с 30 000 до 170 000 <span class="rub">i</span>, а оборот достиг 2 100 000 <span class="rub">i</span></p>
 				</div>
 			</div>
 			<div class="col">
@@ -723,18 +749,18 @@
 					<div class="name">Мария Белякова</div>
 					<a href="http://vsenamestax.ru" target="_blank">vsenamestax.ru</a>
 					<div class="video" data-videoId="n19nd8NQa5c">
-						<img src="img/video/vsenamestax.ru.jpg" width="300" height="200">
+						<img src="img/video.jpg" width="300" height="200">
 					</div>
-					<p class="big-2">За время тренинга оборот вырос<br />на 65%</p>
+					<p class="big-2">За время тренинга <br />оборот вырос на 65%</p>
 				</div>
 				<div class="col-item bg-28">
-					<div class="name">Андрей</div>
-					<a href="http://www.chopochom.com" target="_blank">www.chopochom.com</a>
+					<div class="name">Игорь Казаков</div>
+					<a href="http://workoutzone.ru/" target="_blank">workoutzone.ru</a>
 
-					<div class="video" data-videoId="V1_kkj8khnY">
-						<img src="img/video/chopochom.com.jpg" width="300" height="200">
+					<div class="video" data-videoId="7iOtg-1uUKk">
+						<img src="img/video.jpg" width="300" height="200">
 					</div>
-					<p class="big last">После курсов, практически не вкладываясь, обеспечили себе постоянные продажи</p>
+					<p class="big last">Чистая прибыль составила 150 000 <span class="rub">i</span> в месяц</p>
 				</div>
 			</div>
 			<div class="col">
@@ -742,25 +768,106 @@
 					<div class="name">Светлана Гарина</div>
 					<a href="http://kinderama.ru" target="_blank">kinderama.ru</a>
 					<div class="video" data-videoId="cIz49eCUCBw">
-						<img src="img/video/kinderama.ru.jpg" width="300" height="200">
+						<img src="img/video.jpg" width="300" height="200">
 					</div>
 					<p>Вышли на средний объем &mdash; 10 заказов в день со средним<br />чеком от 1000 до 8000<span class="rub">i</span></p>
 				</div>
 				<div class="col-item bg-26">
-					<div class="name">Морозов Сергей</div>
-					<a href="http://siammart.ru" target="_blank">siammart.ru</a>
-					<div class="video" data-videoId="3aV5Ma7cQGw">
-						<img src="img/video/siammart.ru.jpg" width="300" height="200">
+					<div class="name">Ольга Щеглова</div>
+					<a href="http://www.network-it.ru/" target="_blank">www.network-it.ru</a>
+					<div class="video" data-videoId="E5Bkjv3yoiQ">
+						<img src="img/video.jpg" width="300" height="200">
 					</div>
-					<p class="last" style="margin-top: -5px;">До тренинга наш магазин нахо-<br />дился в инертном состоянии, дальше определенной планки сдвинуться не могли. Сейчас, после обучения, рассчитываем повысить продажи в 2-3 раза.</p>
+					<p class="last" style="margin-top: -5px;">Месячный оборот моего интернет-магазина - 1 500 000 <span class="rub">i</span>, чистая прибыль - 150 000 <span class="rub">i</span></p>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="bg-bottom"></div>
 </section>
+<section class="reviews">
+  <div class="bg-top"></div>
+  <div class="wrap">
+	<h1>Расписание занятий.<br>Конкретно, без трюков</h1>
+	  <p><strong>НЕДЕЛЯ 1</strong></p>
+		<p><strong>ДЕНЬ 1</strong></p>
+		<p>Введение в Бизнес под ключ<strong>. </strong>Организационные вопросы. Выбор ниши</p>
+		<p><strong>ДЕНЬ 2</strong></p>
+		<p>Обратная связь по нишам. Работа с поставщиками.</p>
+		<p><strong>ДЕНЬ 3</strong></p>
+		<p>УТП</p>
+	<p><strong>ДЕНЬ 4</strong></p>
+		<p>Продающий копирайтинг</p>
+		<p><strong>ДЕНЬ 5</strong></p>
+        <p>Продающий копирайтинг (продолжение)</p>
+        <p><strong>ДЕНЬ 6</strong></p>
+        <p>Обратная связь по нишам</p>
+		<p>&nbsp;</p>
+	<p><strong>НЕДЕЛЯ 2</strong> </p>
+		<p><strong>ДЕНЬ 1</strong></p>
+	<p>Обратная связь по копирайтингу</p>
+	<p><strong>ДЕНЬ 2</strong></p>
+	<p>Копирайтинг интернет-магазиа. Юзабилити</p>
+	<p><strong>ДЕНЬ 3</strong></p>
+		<p>Обратная связь, разбор макетов ваших сайтов</p>
+		<p>&nbsp;</p>
+		<p><strong>НЕДЕЛЯ 3</strong></p>
+    <p><strong>ДЕНЬ 1</strong></p>
+        <p>Обратная связь по макетам</p>
+        <p><strong>ДЕНЬ 2</strong></p>
+        <p>Продажи без сайта (Avito) </p>
+        <p>Самостоятельная работа над макетами сайтов для передачи дизайнерам. Начало VIP-коучингов. </p>
+        <p>&nbsp;</p>
+		<p><strong>НЕДЕЛЯ 4</strong></p>
+		<p><strong>ДЕНЬ 1</strong></p>
+		<p>Логистика</p>
+		<p><strong>ДЕНЬ 2</strong></p>
+		<p>Технические моменты самостоятельного создания сайтов</p>
+	<p><strong>ДЕНЬ 3</strong></p>
+		<p>Юзабилити интернет-магазина</p>
+		<p>&nbsp;</p>
+		<p><strong>НЕДЕЛЯ 5</strong></p>
+		<p><strong>ДЕНЬ 1</strong></p>
+		<p>Яндекс Директ</p>
+		<p><strong>ДЕНЬ 2</strong></p>
+		<p>Google AdWords</p>
+		<p><strong>ДЕНЬ 3</strong></p>
+		<p>Аналитика в интернет-магазине</p>
+		<p><strong>ДЕНЬ 4</strong></p>
+		<p>Обратная связь. Аудит ваших рекламных кампаний и аналитики</p>
+		<p>&nbsp;</p>
+		<p><strong>НЕДЕЛЯ 6</strong></p>
+		<p><strong>ДЕНЬ 1</strong></p>
+	<p>Копирайтинг интернет-магазина</p>
+		<p><strong>ДЕНЬ 2</strong></p>
+		<p>Обратная связь. Разбор ваших сайтов</p>
+		<p><strong>ДЕНЬ 3</strong></p>
+		<p>Продвинутые фишки Директа. Яндекс Маркет</p>
+		<p>&nbsp;</p>
+		<p><strong>НЕДЕЛЯ 7</strong></p>
+		<p><strong>ДЕНЬ 1</strong></p>
+		<p>Математика в ИМ (что считаем, как считаем, для чего считаем)</p>
+		<p><strong>ДЕНЬ 2</strong></p>
+		<p>Обратная связь, ответы на вопросы</p>
+		<p><strong>ДЕНЬ 3</strong></p>
+		<p>10 юзабилити ошибок которые не следует совершать на старте</p>
+		<p><strong>ДЕНЬ 4</strong></p>
+		<p>12 навыков высокоэффективного управляющего интернет-магазина</p>
+		<p>&nbsp;</p>
+		<p><strong>НЕДЕЛЯ 8</strong></p>
+		<p><strong>ДЕНЬ 1</strong></p>
+		<p>Управление компанией</p>
+		<p><strong>ДЕНЬ 2</strong></p>
+		<p>Email-маркетинг</p>
+		<p><strong>ДЕНЬ 3</strong></p>
+		<p>Закрытие тренинга</p>
 
-<?= selectBlock("Действуйте прямо сейчас",$counter) ?>
+		
+  </div>
+	<div class="bg-bottom"></div>
+</section>
+
+<?= selectBlock("Действуйте прямо сейчас") ?>
 
 <section class="footer">
 	<div class="bg-top"></div>

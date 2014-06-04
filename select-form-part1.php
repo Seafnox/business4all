@@ -1,34 +1,31 @@
-<?function time_left_text($time, $period)
-{
-    // http://petrenco.com/php.php?txt=122
-    $arr['s'] = array('секунда', 'секунды', 'секунд');
-    $arr['m'] = array('минута', 'минуты', 'минут');
-    $arr['h'] = array('час', 'часа', 'часов');
-    $arr['d'] = array('день', 'дня', 'дней');
-    $arr['M'] = array('месяц', 'месяца', 'месяцев');
-    $arr['Y'] = array('год', 'года', 'лет');
-    $arr['Y2'] = array('года', 'лет', 'лет');
-    $time_abs = abs($time);
+<?
+	function days_left_text($days_left = 4) {
+		$result_text = "";
 
-    $time_abs = intval(substr($time_abs, -2));
-    if ($time_abs > 19)
-        $time_abs = intval(substr($time_abs, -1));
+		if (($days_left % 100) > 10 && ($days_left % 100) < 20) {
+			$result_text = "дней";
+		} else {
+			switch ($days_left % 10){
+				case 1:
+					$result_text = "день";
+					break;
+				case 2:
+				case 3:
+				case 4:
+					$result_text = "дня";
+					break;
+				default:
+					$result_text = "дней";
+			}
+		}
+		return $days_left." ".$result_text;
+	}
 
-    $sec_arr[0] = array(2,3,4);
-    $sec_arr[1] = array(0,5,6,7,8,9);
-    if ($time_abs == 1)
-        $ret = $arr[$period][0];
-    else if (in_array($time_abs, $sec_arr[0]))
-        $ret = $arr[$period][1];
-    else if (($time_abs >= 5 AND $time_abs <= 20) OR $time_abs == 0)
-        $ret = $arr[$period][2];
-
-    return $ret;
-}?>
-<?function selectBlock($header,$counter) {?>
+	function selectBlock($header, $days_left) {
+?>
 	<section class="select-form-part">
 	<div class="wrap">
-		<h1 style="margin-top: -30px;"><?= $header ?></h1>
+		<h1 style="margin-top: -30px;"><?= $header; ?></h1>
 		<div class="imsider-logo"></div>
 		<p class="counter_header">Действует раннее бронирование на специальных условиях. <strong>Цена вырастет через:</strong></p>
 		<p class="counter"></p>
@@ -50,7 +47,7 @@
 								<li></li>
 							</ul>
 							<div class="clear"></div>
-							<div class="price_counter">Следующая цена <s>2 500</s><span class="rub">i</span> через <?= $counter." ".time_left_text($counter, 'd') ?></div>
+							<div class="price_counter">Следующая цена <s>2 500</s><span class="rub">i</span> через <?= days_left_text($days_left); ?></div>
 						</td>
 					<? } ?>
 					<td>
@@ -65,7 +62,7 @@
 							<li></li>
 						</ul>
 						<div class="clear"></div>
-						<div class="price_counter">Следующая цена <s>32 500</s><span class="rub">i</span> через <?= $counter." ".time_left_text($counter, 'd') ?></div>
+						<div class="price_counter">Следующая цена <s>32 500</s><span class="rub">i</span> через <?= days_left_text($days_left); ?></div>
 					</td>
 					<td>
 						<div class="title">VIP. Готовый бизнес.</div>
@@ -79,7 +76,7 @@
 							<li class="act"></li>
 						</ul>
 						<div class="clear"></div>
-						<div class="price_counter">Следующая цена <s>67 500</s><span class="rub">i</span> через <?= $counter." ".time_left_text($counter, 'd') ?></div>
+						<div class="price_counter">Следующая цена <s>67 500</s><span class="rub">i</span> через <?= days_left_text($days_left); ?></div>
 					</td>
 				</tr>
 				</thead>
@@ -100,7 +97,7 @@
 						<li>Доступ в Битву интернет-магазинов (для 10 лучших участников)</li>
 						<li>Доступ к шаблонам дизайна<br />
 							и рекламы, которыми будем пользоваться мы</li>
-						<li>Готовый одностраничный сайт с правками от команды Николая Федоткина</li>
+						<li>Готовый одностраничный сайт с правками лично от Николая Федоткина</li>
 						<li>Сертификат о прохождении тренинга</li>
 					</ul></td>
 					<td><ul>
@@ -111,7 +108,6 @@
 						<li>Тактическая коучинговая сессия с Николаем Федоткиным</li>
 						<li>Поддержка тренеров по e-mail в течение года</li>
 						<li>Возможность посещения офисов наших интернет-магазинов с изучением всех бизнес-процессов</li>
-						<li>Готовый одностраничный сайт с правками лично от Николая Федоткина</li>
 						<li>Городской московский номер, на который Ваши клиенты смогут звонить Вам</li>
 						<li>500 минут  работы Call Center по обработке Ваших заказов с возможностью продления</li>
 						<li>Склад для хранения Ваших товаров</li>

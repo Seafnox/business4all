@@ -36,7 +36,7 @@
 	// --
 
     $counter = round($diff / 60 / 60 / 24); // округляем дни для блока вывода дней
-    require_once("select-form-part.php");
+    require_once("select-form-part-test.php");
 ?><!DOCTYPE html>
 <html>
 <head>
