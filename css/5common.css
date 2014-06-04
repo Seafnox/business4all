@@ -107,6 +107,8 @@ section.select-form-part .form-table thead td { padding: 25px 25px 12px; border-
 section.select-form-part .form-table thead .title { text-transform: uppercase; font-size: 16px; font-weight: 600; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; 
 } 
 section.select-form-part .form-table thead .price { font-size: 55px; margin-top: 8px; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease; } 
+section.select-form-part .form-table thead .old_price { font-size: 30px; margin-left: 10px; display:inline-block; position: relative;}
+section.select-form-part .form-table thead .old_price:after {display:block;position:absolute;content: ""; width:100%; left:0; top:50%; border-bottom:2px solid;}
 section.select-form-part .form-table thead td.selected .title,
 section.select-form-part .form-table thead td.selected .price { color: #f065a2; } 
 section.select-form-part .form-table thead .stars { margin-top: 4px; } 

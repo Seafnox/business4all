@@ -25,6 +25,14 @@
 
     return $ret;
 }?>
+<?function counter_text($counter) {
+    if ($counter == 0) {
+        return "сегодня";
+    } else {
+        return "через ".$counter." ".time_left_text($counter, 'd');
+    }
+}
+    ?>
 <?function selectBlock($header,$counter) {?>
 	<section class="select-form-part">
 	<div class="wrap">
@@ -40,7 +48,7 @@
 					<? if (isset($_GET['testdrive'])) { ?>
 						<td>
 							<div class="title">Тест-драйв БПК</div>
-							<div class="price">1 500<span class="rub">i</span></div>
+							<div class="price">1 500<span class="rub">i</span><div class="old_price">2 500<span class="rub">i</span></div></div>
 							<ul class="stars">
 								<li class="act"></li>
 								<li></li>
@@ -50,12 +58,12 @@
 								<li></li>
 							</ul>
 							<div class="clear"></div>
-							<div class="price_counter">Следующая цена <s>2 500</s><span class="rub">i</span> через <?= $counter." ".time_left_text($counter, 'd') ?></div>
+							<div class="price_counter">Следующая цена <?= counter_text($counter) ?></div>
 						</td>
 					<? } ?>
 					<td>
 						<div class="title">Новичок</div>
-						<div class="price">27 900<span class="rub">i</span></div>
+						<div class="price">27 900<span class="rub">i</span><div class="old_price">32 500<span class="rub">i</span></div></div>
 						<ul class="stars">
 							<li class="act"></li>
 							<li class="act"></li>
@@ -65,11 +73,11 @@
 							<li></li>
 						</ul>
 						<div class="clear"></div>
-						<div class="price_counter">Следующая цена <s>32 500</s><span class="rub">i</span> через <?= $counter." ".time_left_text($counter, 'd') ?></div>
+						<div class="price_counter">Следующая цена <?= counter_text($counter) ?></div>
 					</td>
 					<td>
 						<div class="title">VIP. Готовый бизнес.</div>
-						<div class="price">59 900<span class="rub">i</span></div>
+						<div class="price">59 900<span class="rub">i</span><div class="old_price">67 500<span class="rub">i</span></div></div>
 						<ul class="stars">
 							<li class="act"></li>
 							<li class="act"></li>
@@ -79,7 +87,7 @@
 							<li class="act"></li>
 						</ul>
 						<div class="clear"></div>
-						<div class="price_counter">Следующая цена <s>67 500</s><span class="rub">i</span> через <?= $counter." ".time_left_text($counter, 'd') ?></div>
+						<div class="price_counter">Следующая цена <?= counter_text($counter) ?></div>
 					</td>
 				</tr>
 				</thead>
