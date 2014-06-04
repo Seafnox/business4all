@@ -206,6 +206,7 @@ $(document).ready(function()
         $(".video").click(function(e) {
             if ($(this).attr("data-videoId") != "")
                 addEmbeded($(this), $(this).attr("data-videoId"), $(this).width(), $(this).height(), 'true');
+            $(this).addClass("activated");
             return false;
         });
 
@@ -216,7 +217,9 @@ $(document).ready(function()
             $("#slide_more .bg-top").slideDown(1500);
             $("#slide_more .wrap").slideDown(1500);
             $("#slide_more .bg-bottom").slideDown(1500);
-            $("html, body").animate({scrollTop: $("#slide_more").offset().top}, 1500);
+            var offset = $("#slide_more").offset().top;
+            $("html, body").animate({scrollTop: offset}, 1500);
+            return false;
         });
 
         $('body').activity({
