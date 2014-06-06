@@ -259,20 +259,20 @@
 					<div>5</div>
 				</td>
 				<td class="leader">
-					<div class="name">Игорь Минтусов</div>
+					<div class="name">Роман Субботинов</div>
 				</td>
-				<td>Купонные сайты</td>
+				<td>Интернет-магазин<br>покрасочных камер</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
-				<td class="money small">500 000 <span class="rub">i</span></td>
+				<td class="money small">600 000 <span class="rub">i</span></td>
 			</tr>
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="5JMGDdFlHLg">
-							<img src="img/video/Игорь%20Минтусов.jpg" width="440" height="250">
-						</div>
+						<div class="video" data-videoId="W1oVXEpYE4w">
+                        <img src="img/video/subbotinov.png" width="440" height="250">
+                        </div>
 					</div>
 				</td>
 			</tr>
@@ -281,10 +281,11 @@
 					<div>6</div>
 				</td>
 				<td class="leader">
-					<div class="name">Антон Бочкарев</div>
-				   <a href="http://agroboom.ru" class="link">agroboom.ru</a>
+					<div class="name">Игорь Басимов</div>
+				   <a href="http://progps-rus.ru" class="link">progps-rus.ru</a>
 				</td>
-				<td>Интернет-магазин<br />агро товаров</td>
+				<td>Интернет-магазин<br />
+				навигаторов</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
@@ -293,8 +294,8 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="mXV6AU6BwA4">
-							<img src="img/video/Антон%20Бочкарев.jpg" width="440" height="250">
+						<div class="video" data-videoId="EFtZaNh97m8">
+							<img src="img/video/basimov.png" width="440" height="250">
 						</div>
 					</div>
 				</td>
@@ -304,10 +305,10 @@
 					<div>7</div>
 				</td>
 				<td class="leader">
-					<div class="name">Татьяна Сушкова</div>
-				   <a href="http://www.myxmas.ru" class="link">www.myxmas.ru</a>
+					<div class="name">Леван Гонгадзе </div>
 				</td>
-				<td>Интернет-магазин<br />новогодних товаров</td>
+				<td>Интернет-магазин<br />
+				рюкзаков</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
@@ -316,8 +317,8 @@
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="wqbe3fvn-tE">
-							<img src="img/video/Татьяна%20Сушкова.jpg" width="440" height="250">
+						<div class="video" data-videoId="JPCLA8kjATM">
+							<img src="img/video/gongadze.png" width="440" height="250">
 						</div>
 					</div>
 				</td>
@@ -340,7 +341,7 @@
 				<td colspan="5">
 					<div class="hidden-wrap">
 						<div class="video" data-videoId="CL8XmILXVTY">
-							<img src="img/video/Андрей%20Глушаня.jpg" width="440" height="250">
+							<img src="img/video/Андрей Глушаня.jpg" width="440" height="250">
 						</div>
 					</div>
 				</td>
@@ -350,20 +351,21 @@
 					<div>9</div>
 				</td>
 				<td class="leader">
-					<div class="name">Илья Мусатов</div>
-				   <a href="http://lensday.ru" class="link">lensday.ru</a>
+					<div class="name">Антон Черновский</div>
+				   <a href="http://akb.4fe.ru" class="link">akb.4fe.ru</a>
 				</td>
-				<td>Интернет-магазин<br />очков</td>
+				<td>Интернет-магазин<br />
+				аккумуляторов</td>
 				<td class="hist">
 					<div class="show-btn">История успеха</div>
 				</td>
-				<td class="money small">+50% прибыль</td>
+				<td class="money small">200 000 <span class="rub">i</span></td>
 			</tr>
 			<tr class="hidden-details only-video">
 				<td colspan="5">
 					<div class="hidden-wrap">
-						<div class="video" data-videoId="5h_5uef9SAg">
-							<img src="img/video/Илья%20Мусатов.jpg" width="440" height="250">
+						<div class="video" data-videoId="VtlRVoJrxTY">
+							<img src="img/video/chernovskyi.png" width="440" height="250">
 						</div>
 					</div>
 				</td>
