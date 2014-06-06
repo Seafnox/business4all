@@ -565,134 +565,161 @@
 </section>
 
 <a name="scroll-3"></a>
-<section id="qwest-3" class="program-table">
-	<div class="wrap">
-		<h1 class="purple">Особая программа</h1>
-		<h2>Помимо  готовых бизнес-инструментов вы получаете полноценный практический  бизнес-тренинг.</h2>
-
-		<div class="table">
-		  <div class="header blue-bg">Модуль 1</div>
-			<div class="body">
-				<div class="medal medal-1">
-					<strong>Получите знак отличия:</strong>
-					<div class="hr"></div>
-					<p>У матросов нет<br />вопросов</p>
-				</div>
-				<div class="content">
-					<strong>Создаём Оффер:</strong>
-					<ul>
-						<li>25 способов выбрать нишу</li>
-						<li>Тактика союзничества с поставщиками</li>
-						<li>18 ошибок, которые растянут старт на 3 месяца</li>
-						<li>Что скрывают поставщики на первом сеансе связи</li>
-						<li>Как за три шага определить прибыльность ниши</li>
-						<li>Что такое УТП и как правильно его применять</li>
-						<li>Без каких трех фишек у вас точно ничего не купят</li>
-						<li>Какая должна быть маржа, чтобы точно не разориться</li>
-						<li>Еще примерно 134 «фишки» и тактики по выбору и доработки правильного оффера</li>
-					</ul>
-					<strong>Находим трафик и разгоняем посещаемость:</strong>
-					<ul>
-						<li>Какой трафик подойдет конкретно вашему проекту</li>
-						<li>Быстрые запуски и тестирования с помощью контекстной рекламы</li>
-						<li>12 источников трафика (пробы и тесты)</li>
-						<li>Как правильно работать с социальными сетями</li>
-						<li>Для чего интернет-магазину группа &laquo;Вконтакте&raquo;</li>
-						<li>Как не разориться на контекстной рекламе</li>
-						<li>Пошаговая инструкция по запуску SEO методик для интернет-магазина с минимальными затратами</li>
-						<li>Директ Мэйл — что это и почему он приносит нам сотни тысяч каждый месяц</li>
-						<li>Почему 99% посетителей уходят с вашего сайта с пустыми руками</li>
-						<li>Как &laquo;ловить&raquo; посетителей и увеличивать конверсию</li>
-						<li>Список лучших баз для хранения ваших клиентов</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="table">
-			<div class="header azure-bg">Модуль 2</div>
-			<div class="body">
-				<div class="medal medal-2">
-					<strong>Получите знак отличия:</strong>
-					<div class="hr"></div>
-					<p>Первая прибыль</p>
-				</div>
-				<div class="content">
-					<strong>Разгоняем конверсию и увеличиваем прибыль:</strong>
-					<ul>
-						<li>Почему у интернет-магазинов такая маленькая конверсия</li>
-						<li>9 простых шагов для увеличения конверсии</li>
-						<li>Как сделать свой сайт продающим: 15 главных секретов юзабилити</li>
-						<li>Как правильно настроить аналитику и статистику</li>
-						<li>Как с помощью аналитики увеличивать прибыль</li>
-						<li>Главные критерии успешности и провальности вашего сайта</li>
-						<li>Что такое юзабилити простыми словами</li>
-						<li>Тестирования в домашних условиях (пошаговая инструкция)</li>
-					</ul>
-					<strong>Технические вопросы:</strong>
-					<ul>
-						<li>Как определиться с движком за 10 минут</li>
-						<li>Как запустить сайт за 28 минут</li>
-						<li>Как сэкономить на услугах фрилансеров и студий до 100 000 руб. на старте</li>
-						<li>9 неизменных правил работы с фрилансерами</li>
-						<li>Какие работы с сайтом нужно обязательно сделать на старте</li>
-						<li>Тактика работы с программистами. Как не впасть в зависимость</li>
-						<li>Хостинги, домены и прочие &laquo;радости&raquo;. Чек лист успешного выбора</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="table">
-			<div class="header pink-bg">Модуль 3</div>
-			<div class="body">
-				<div class="medal medal-3">
-					<strong>Получите знак отличия:</strong>
-					<div class="hr"></div>
-					<p>300 000 не предел</p>
-				</div>
-				<div class="content">
-					<strong>Технологии будущего и настоящего:</strong>
-					<ul>
-						<li>Direct-mail</li>
-						<li>Многошаговые продажи</li>
-						<li>Продажи через конкурсы</li>
-						<li>Как продавать с помощью обучения</li>
-						<li>Что лучше продавать в социальных сетях</li>
-						<li>Как продавать с помощью Youtube</li>
-					</ul>
-					<strong>Множество полезных &laquo;фишек&raquo;:</strong>
-					<ul>
-						<li>Юридические вопросы на старте</li>
-						<li>Бизнесовые фишки</li>
-						<li>Личностный рост</li>
-						<li>Аутсорсинг и делегирование</li>
-						<li>Автоматизация бизнеса</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="footer">После каждой недели мы проводим мини-экзамен, прохождение которого гарантирует пропуск<br />на следующий этап обучения и бонусные касты.</div>
-	</div>
-</section>
-
-<section class="for-monsters">
-	<div class="bg-top"></div>
-	<div class="wrap">
-		<h1>Для монстров</h1>
-		<h2>Коучинговый месяц &laquo;Усиление&raquo;. Серьезные задачи.</h2>
-		<p>Придется больше работать по алгоритмам, которые уже дали результат, но результат стоит того.</p>
-
-		<div class="items">
-			<div class="item auto">Автоматизация бизнеса</div>
-			<div class="item branding">Быстрый брендинг</div>
-			<div class="item marketing">E-mail маркетинг на миллион</div>
-			<div class="item copyrighting">Копирайтинг больших магазинов</div>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<div class="bg-bottom"></div>
+<section id="qwest-3" class="timetable">
+    <div class="bg-top"></div>
+    <div class="wrap">
+        <h1>Расписание занятий. <br>Конкретно, без трюков</h1>
+        <div class="timetable_week">
+            <div class="timetable_week_number">1</div>
+            <div class="timetable_week_header">Первая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Введение в Бизнес под ключ. Организационные вопросы. Выбор ниши.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Обратная связь по нишам. Работа с поставщиками.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">УТП — уникальное торговое предложение.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Четвертый</div>
+                <div class="timetable_description">Продающий копирайтинг.</div>
+            </div>
+            <div class="timetable_day clear">
+                <div class="timetable_day_header">Пятый</div>
+                <div class="timetable_description">Продающий копирайтинг. Продолжение.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Шестой</div>
+                <div class="timetable_description">Обратная связь по нишам.</div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">2</div>
+            <div class="timetable_week_header">Вторая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Копирайтинг. Обратная связь.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Копирайтинг для интернет-магазина. Юзабилити.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">Обратная связь, разбор макетов ваших сайтов.</div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">3</div>
+            <div class="timetable_week_header">Третья неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Обратная связь по макетам.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Продажи без сайта (Avito)<br>
+                    Самостоятельная работа над макетами сайтов для передачи дизайнерам. </div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_description no_header">Начало <a href="//intensive.imsider.ru">VIP-коучингов</a>.</div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">4</div>
+            <div class="timetable_week_header">Четвёртая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Логистика.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Технические моменты самостоятельного создания сайтов.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">Юзабилити интернет-магазина.</div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">5</div>
+            <div class="timetable_week_header">Пятая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Яндекс Директ.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Google AdWords.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">Аналитика в интернет-магазине.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Четвертый</div>
+                <div class="timetable_description">Обратная связь. Аудит ваших рекламных кампаний и аналитики.
+                </div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">6</div>
+            <div class="timetable_week_header">Шестая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Копирайтинг интернет-магазина.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Обратная связь. Разбор ваших сайтов.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">Продвинутые фишки Директа. Яндекс Маркет.</div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">7</div>
+            <div class="timetable_week_header">Седьмая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Математика. Что считаем, как считаем, для чего считаем.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Обратная связь, ответы на вопросы.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">10 юзабилити ошибок которые не следует совершать на старте.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Четвертый</div>
+                <div class="timetable_description">12 навыков высокоэффективного управляющего.</div>
+            </div>
+        </div>
+        <div class="timetable_week">
+            <div class="timetable_week_number">8</div>
+            <div class="timetable_week_header">Восьмая неделя</div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Первый день</div>
+                <div class="timetable_description">Управление компанией.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Второй</div>
+                <div class="timetable_description">Email-маркетинг.</div>
+            </div>
+            <div class="timetable_day">
+                <div class="timetable_day_header">Третий</div>
+                <div class="timetable_description">Закрытие тренинга.</div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-bottom"></div>
 </section>
 
 <section class="reviews">

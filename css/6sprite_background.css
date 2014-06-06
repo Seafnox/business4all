@@ -78,7 +78,7 @@ section.seriousness .bg-top {width: 100%; height: 278px; position: relative; top
     background-image: url(../img/background_sprite.png);
     background-position: 50% -2305px;
 }
-section.seriousness .bg-bottom { background:#f3f3f3; width: 100%; height: 476px; margin-top:-370px;
+section.seriousness .bg-bottom { background:#4784B1; width: 100%; height: 476px; margin-top:-370px;
     background-image: url(../img/background_sprite.png);
     background-position: 50% -3081px;
 }
@@ -86,13 +86,9 @@ section.seriousness .bg-bottom { background:#f3f3f3; width: 100%; height: 476px;
     background-image: url(../img/total_sprite.png);
     background-position: -150px -10px;
 }
-section.for-monsters .bg-top {width: 100%; height: 108px; position: relative;
+section.timetable .bg-bottom { width: 100%; background: #4785B1; height: 470px; margin-top:-160px;
     background-image: url(../img/background_sprite.png);
-    background-position: 50% -3577px;
-}
-section.for-monsters .bg-bottom { background: #4785B1; width: 100%; height: 445px; margin-top:-330px;
-    background-image: url(../img/background_sprite.png);
-    background-position: 50% -3705px;
+    background-position: 50% -789px;
 }
 section.reviews .bg-bottom { background: #f064a2; width: 100%; height: 551px; margin-top:-440px;
     background-image: url(../img/background_sprite.png);
@@ -149,74 +145,8 @@ section.select-form-part .form-table thead .stars li { height: 20px; width: 20px
     background-image: url(../img/total_sprite.png);
     background-position: -784px -10px;
 }
+
 section.select-form-part .form-table thead .stars li.act { background-position: -764px -10px; }
-section.program-table .table .medal.medal-1:after {
-    content: "";
-    display: block;
-    margin-top:10px;
-    width: 142px;
-    height: 142px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -3341px -10px;
-}
-section.program-table .table .medal.medal-2:after {
-    content: "";
-    display: block;
-    margin-top:10px;
-    width: 142px;
-    height: 142px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -3501px -10px;
-}
-section.program-table .table .medal.medal-3:after {
-    content: "";
-    display: block;
-    margin-top:10px;
-    width: 142px;
-    height: 142px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -3661px -10px;
-}
-section.for-monsters .item.auto:before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 110px;
-    margin: 0 auto;
-    margin-bottom:30px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -3822px 0px;
-}
-section.for-monsters .item.branding:before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 110px;
-    margin: 0 auto;
-    margin-bottom:30px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -3942px 0px;
-}
-section.for-monsters .item.marketing:before {
-    content: "";
-    display: block;
-    width: 110px;
-    height: 110px;
-    margin: 0 auto;
-    margin-bottom:30px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -4062px 0px;
-}
-section.for-monsters .item.copyrighting:before {
-    content: "";
-    display: block;
-    width: 100px;
-    height: 110px;
-    margin: 0 auto;
-    margin-bottom:30px;
-    background-image: url(../img/total_sprite.png);
-    background-position: -4190px 0px;
-}
 .popup .window { position: absolute; top: 31115px; width: 1020px; height: 1980px; left: 50%; margin-left: -510px;
     margin-top: 100px; opacity: 0; color: #fff; background-color: #1c1c23; border-radius: 10px; padding: 30px 40px 40px 40px;
     -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;     box-sizing: border-box;
