@@ -289,6 +289,10 @@ section.timetable .timetable_week_header {font-family: 'Open Sans', sans-serif; 
 section.timetable .timetable_day {float:left; width:25%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-size:14px;line-height: 20px;
     margin-top: 20px; padding-right: 10px;}
 section.timetable .timetable_day.clear {clear:left;}
+section.timetable .timetable_day.back {background: rgba(173, 118, 206, 0.15); margin-left: -20px; margin-bottom: -20px; margin-top:0; width: 182px; padding: 20px;
+    -webkit-border-radius: 50%/20px; -moz-border-radius: 50%/20px; border-radius: 50%/20px;
+    box-shadow: 0 0 10px -6px rgba(173, 118, 206, 1);
+   }
 section.timetable .timetable_day_header {font-weight: bold;}
 section.timetable .timetable_description {}
 section.timetable .timetable_description a {color: inherit;}

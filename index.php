@@ -626,7 +626,7 @@
                     Самостоятельная работа над макетами сайтов для передачи дизайнерам. </div>
             </div>
             <div class="timetable_day">
-                <div class="timetable_description no_header">Начало <a href="//intensive.imsider.ru">VIP-коучингов</a>.</div>
+                <div class="timetable_description no_header">Начало VIP-коучингов.</div>
             </div>
         </div>
         <div class="timetable_week">
@@ -713,7 +713,7 @@
                 <div class="timetable_day_header">Второй</div>
                 <div class="timetable_description">Email-маркетинг.</div>
             </div>
-            <div class="timetable_day">
+            <div class="timetable_day back">
                 <div class="timetable_day_header">Третий</div>
                 <div class="timetable_description">Закрытие тренинга.</div>
             </div>
