@@ -1,0 +1,162 @@
+.girl-3 {width: 260px; height: 490px;
+    background-image: url(../img/total_sprite.png);
+    background-position: -2423px -10px;
+}
+.imsider-logo { width: 157px; height: 30px;
+    background-image: url(../img/total_sprite.png);
+    background-position: -587px -10px;
+}
+section.logo .bg-bottom { width: 100%; background: #008fea; height: 110px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -10px;
+}
+section.video_block .bg-bottom { width: 100%; background: #F064A2; height: 499px; margin-top:-380px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -140px;
+}
+#slide_more .bg-top { width: 100%; background: #fff; height: 110px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -530px;
+}
+#slide_more .bg-bottom { width: 100%; background: #f062a1; height: 108px; margin-top:0px; margin-bottom: -110px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -5471px;
+}
+section.get-quest .bg-bottom { width: 100%; background: #f062a1; height: 445px; margin-top:-300px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -5595px;
+}
+section.leaderboard .bg-top { width: 100%; background: #4784b1; height: 110px; margin-top:-118px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -659px;
+}
+section.leaderboard .bg-bottom { width: 100%; background: #235fa5; height: 470px; margin-top:-370px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -789px;
+}
+section.leaderboard table {background-size: 105% 110px;
+    background-image: url(../img/background_sprite.png);
+    background-position: -72px -4243px;
+}
+section.leaderboard table .hist .show-btn:before {
+    background-image: url(../img/total_sprite.png);
+    background-position: -84px -13px;
+    content: "";
+    display: inline-block;
+    width:60px;
+    height:25px;
+}
+section.get-book .logos { height: 310px; position: relative; margin-top: -70px;
+    background-image: url(../img/background_sprite.png);
+    background-position: -10px -1283px;
+}
+section.get-book .bg-bottom { width: 100%; background: #ffffff; height: 673px; margin-top:-573px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -1614px;
+}
+section.policeman-test { background: #5c7bb2; padding: 0px 0 150px 0; color: #fff;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -6060px;
+}
+section.policeman-test .bg-top { background: #5c7bb2; width: 100%; height: 200px; position: relative; top:-118px; margin-bottom:-200px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -659px;
+}
+section.learning-process .bg-top { background: #ffffff; width: 100%; height: 280px; position: relative; margin-bottom:-170px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -2305px;
+}
+section.learning-process .bg-bottom { background: #f064a2; width: 100%; height: 456px; margin-top: -350px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -2605px;
+}
+section.learning-process .icons {height: 760px; width: 940px; margin: 30px 0 0 0;
+    background-image: url(../img/total_sprite.png);
+    background-position: -1143px -10px;
+}
+section.seriousness .bg-top {width: 100%; height: 278px; position: relative; top:-110px; margin-bottom:-280px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -2305px;
+}
+section.seriousness .bg-bottom { background:#4784B1; width: 100%; height: 476px; margin-top:-370px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -3081px;
+}
+.girl-message .arrow { width: 24px; height: 21px; position: absolute; left: -24px; top: 60px;
+    background-image: url(../img/total_sprite.png);
+    background-position: -150px -10px;
+}
+section.timetable .bg-bottom { width: 100%; background: #4785B1; height: 470px; margin-top:-160px;
+    background-image: url(../img/background_sprite.png);
+    background-position: 50% -789px;
+}
+section.reviews .bg-bottom { background: #f064a2; width: 100%; height: 551px; margin-top:-440px;
+    background-image: url(../img/background_sprite.png);
+    background-position:  50% -4640px;
+}
+section.footer { color: #fff; background-color: #1c1c23; padding: 0 0 35px 0; font-size: 14px; margin-top: -8px;}
+section.footer .bg-top { position: relative; top: -110px; margin-bottom:-110px; height:110px;
+    background-image: url(../img/background_sprite.png);
+    background-position:  50% -5341px;
+}
+section.footer .rec ul li { line-height: 20px; font-size: 13px; padding-left: 15px;}
+section.why-it-works ._bg-bottom { background: #f064a2; width: 100%; height: 108px; margin-top: 10px;
+    background-image: url(../img/background_sprite.png);
+    background-position: -970px -5471px;
+}
+section.why-it-works .reason .icon-4 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -194px -10px;
+}
+section.why-it-works .reason .icon-3 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -297px -10px;
+}
+section.why-it-works .reason .icon-2 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -399px -10px;
+}
+section.why-it-works .reason .icon-1 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -491px -10px;
+}
+section.reviews .col-item.bg-25 {
+    background-image: url(../img/background_sprite.png);
+    background-position: -10px -4170px;
+}
+section.reviews .col-item.bg-26 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -2702px -10px;
+}
+section.reviews .col-item.bg-27 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -823px -10px;
+}
+section.reviews .col-item.bg-28 {
+    background-image: url(../img/total_sprite.png);
+    background-position: -3022px -10px;
+}
+.scroll-down-btn { position: absolute; top: 100%; left: 50%; margin: 30px 0 0 -35px; text-align: center; width: 70px; line-height: 13px;
+    font-weight: 600; font-size: 12px; cursor: pointer; height: 68px; z-index: 10;
+    background-image: url(../img/total_sprite.png);
+    background-position: 0px 23px;
+}
+section.select-form-part .form-table thead .stars li { height: 20px; width: 20px; display: block; float: left; margin-right: 10px;
+    background-image: url(../img/total_sprite.png);
+    background-position: -784px -10px;
+}
+
+section.select-form-part .form-table thead .stars li.act { background-position: -764px -10px; }
+.popup .window { position: absolute; top: 31115px; width: 1020px; height: 1980px; left: 50%; margin-left: -510px;
+    margin-top: 100px; opacity: 0; color: #fff; background-color: #1c1c23; border-radius: 10px; padding: 30px 40px 40px 40px;
+    -webkit-box-sizing: border-box;    -moz-box-sizing: border-box;     box-sizing: border-box;
+    background-image: url(../img/total_sprite.png);
+    background-position: -4820px -10px;
+}
+section.get-book .co-owners .col {
+    background-image: url(../img/total_sprite.png);
+    background-position: -2103px 242px;
+}
+section.get-book .co-owners .col-1 { height: 830px; background-position: -2103px 242px;}
+section.get-book .co-owners .col-2 { height: 860px; background-position: -2103px 272px;}
+section.get-book .co-owners .col-3 { height: 890px; background-position: -2103px 302px;}
