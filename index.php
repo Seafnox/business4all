@@ -1,4 +1,5 @@
 <?
+	// -- сборка параметра tag для ссылок блока тарифов - на основе utm-меток
 	function prepareTag(){
 		$params = array('utm_medium', 'utm_source', 'utm_campaign');
 		$parts = array();
@@ -14,6 +15,7 @@
 			return implode('|',$parts);
 	}
 	$tag = prepareTag();
+	// --
 
 	// -- цикличный счетчик
     $now = time();
@@ -41,6 +43,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<!-- Google Analytics Content Experiment code -->
+	<script>function utmx_section(){}function utmx(){}(function(){var
+	k='82360613-20',d=document,l=d.location,c=d.cookie;
+	if(l.search.indexOf('utm_expid='+k)>0)return;
+	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+	</script><script>utmx('url','A/B');</script>
+	<!-- / Google Analytics Content Experiment code -->
+
 	<meta name="description" content="">
 	<link rel="shortcut icon" type="image/x-icon" href="img/icons/ico16.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/icons/ico144.png">
@@ -70,7 +87,7 @@
 <body>
 <section class="logo">
 	<div class="wrap">
-		<div class="current_date">16 июня</div>
+		<div class="current_date">8 сентября</div>
 		<div class="online-store-from-scratch">
 			<span class="key">Интернет-магазин под ключ</span>
 			<br>
@@ -155,7 +172,7 @@
 	<div class="bg-bottom"></div>
 </section>
 
-<?= selectBlock("Вы уже решили, кем хотите<br />вступить в игру?",$counter) ?>
+<?= selectBlock("Вы уже решили, кем хотите<br />вступить в игру?", $counter, $tag); ?>
 
 <section class="leaderboard">
 	<div class="bg-top"></div>
@@ -515,7 +532,7 @@
 	<div class="bg-bottom"></div>
 </section>
 
-<?= selectBlock("Уже решили что вам нужно?",$counter) ?>
+<?= selectBlock("Уже решили что вам нужно?", $counter, $tag); ?>
 
 <section class="seriousness">
 	<div class="bg-top"></div>
@@ -789,7 +806,7 @@
 	<div class="bg-bottom"></div>
 </section>
 
-<?= selectBlock("Действуйте прямо сейчас",$counter) ?>
+<?= selectBlock("Действуйте прямо сейчас", $counter, $tag); ?>
 
 <section class="footer">
 	<div class="bg-top"></div>
@@ -1007,6 +1024,26 @@
 		};</script>
 	<script type="text/javascript" src="https://app.getresponse.com/goals_log.js?p=42604&u=SwZy"></script>
 	<!-- / GetResponse tracking code -->
+
+	<!-- SiteHeart code -->
+	<script>
+	(function(){
+	var widget_id = 570127;
+	_shcp =[{widget_id : widget_id}];
+	var lang =(navigator.language || navigator.systemLanguage 
+	|| navigator.userLanguage ||"en")
+	.substr(0,2).toLowerCase();
+	var url ="widget.siteheart.com/widget/sh/"+ widget_id +"/"+ lang +"/widget.js";
+	var hcc = document.createElement("script");
+	hcc.type ="text/javascript";
+	hcc.async =true;
+	hcc.src =("https:"== document.location.protocol ?"https":"http")
+	+"://"+ url;
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hcc, s.nextSibling);
+	})();
+	</script>
+	<!-- / SiteHeart code -->
 </div>
 </body>
 </html>

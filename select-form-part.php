@@ -33,7 +33,7 @@
     }
 }
     ?>
-<?function selectBlock($header,$counter) {?>
+<?function selectBlock($header,$counter,$tag) {?>
 	<section class="select-form-part">
 	<div class="wrap">
 		<h1 style="margin-top: -30px;"><?= $header ?></h1>
@@ -47,8 +47,8 @@
 				<tr>
 						<td>
 							<div class="title">Новичок</div>
-							<div class="price">16 900<span class="rub">i</span>
-							  <div class="old_price">29 900<span class="rub">i</span></div></div>
+							<div class="price">25 900<span class="rub">i</span>
+							  <div class="old_price">30 000<span class="rub">i</span></div></div>
 							<ul class="stars">
 								<li class="act"></li>
 								<li></li>
@@ -62,9 +62,9 @@
 						</td>
 					<td>
 						<div class="title">VIP. Готовый бизнес.</div>
-						<div class="price">30 900<span class="rub">i</span>
-						  <div class="old_price">44 900<span class="rub">i</span></div></div>
-						<ul class="stars">
+						<div class="price">45 900<span class="rub">i</span>
+						  <div class="old_price">55 000<span class="rub">i</span></div></div>
+						  <ul class="stars">
 							<li class="act"></li>
 							<li class="act"></li>
 							<li class="act"></li>
@@ -77,9 +77,9 @@
 					</td>
 					<td>
 						<div class="title">Ultra-VIP</div>
-						<div class="price">64 900<span class="rub">i</span>
-						  <div class="old_price">79 900<span class="rub">i</span></div></div>
-						<ul class="stars">
+						<div class="price">74 900<span class="rub">i</span>
+						  <div class="old_price">90 000<span class="rub">i</span></div></div>
+						  <ul class="stars">
 							<li class="act"></li>
 							<li class="act"></li>
 							<li class="act"></li>
@@ -118,7 +118,7 @@
                         <li>Доступ в Битву интернет-магазинов (для 10 лучших участников)</li>
                         <li>Доступ к шаблонам дизайна<br />
                           и рекламы, которыми будем пользоваться мы</li>
-                        <li>Дополнительные 8 личных занятиq, где тренеры работают над вашим бизнесом</li>
+                        <li>Дополнительные 8 личных занятий, где тренеры работают над вашим бизнесом</li>
                         <li>Тактическая коучинговая сессия с Николаем Федоткиным</li>
                         <li>Поддержка тренеров по e-mail в течение года</li>
                         <li>Возможность посещения офисов наших интернет-магазинов с изучением всех бизнес-процессов</li>
@@ -142,18 +142,18 @@
 								<p>Цель:</p>
 								<p class="value">30 000 руб</p>
 							</div>
-							<a href="http://imsider.justclick.ru/order/bpk2-light/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a>
+							<a href="http://imsider.justclick.ru/order/bpk3_novichok/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a>
 						</td>
 					<td><div class="goal">
 							<p>Цель:</p>
 							<p class="value">100 000+ руб</p>
 						</div>
-						<a href="http://imsider.justclick.ru/order/bpk2-novichok/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
+						<a href="http://imsider.justclick.ru/order/bpk3_vip/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
 					<td><div class="goal">
 							<p>Цель:</p>
 							<p class="value">300 000+ руб</p>
 						</div>
-						<a href="http://imsider.justclick.ru/order/bpk2-VIP/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
+						<a href="http://imsider.justclick.ru/order/bpk3_ultra/?required=phone&tag=<?=$tag;?>" target="_blank" class="btn">Открыть бизнес</a></td>
 				</tr>
 				</tfoot>
 			</table>
