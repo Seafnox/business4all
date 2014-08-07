@@ -20,7 +20,7 @@ if (isset($_POST) && !empty($_POST))
     $from_mail = "info@imsider.ru";
     $subject = '[business.imsider.ru] заявка на обратный звонок';
     $is_html = true;
-    $toemail = array('projects@imsider.ru');
+    $toemail = array('projects@imsider.ru', 'evgen135@mail.ru');
     $toname = array("");
     include_once("lib/mandrillapp.php");
 

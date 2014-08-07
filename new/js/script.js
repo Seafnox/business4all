@@ -112,7 +112,12 @@ $(document).ready(function() {
             removeClass($(this).closest('form').find('.callback-tel'));
             if (!wrapper.find('.callback-block').is(":hidden"))
             {
-                //TODO тут ajax 
+                //TODO тут ajax
+                if (wrapper.closest(".header")[0] == undefined) {
+                    ga('send', 'event', 'заказ', 'отправка формы обратного звонка', '[форма в блоке "Действуйте прямо сейчас"]');
+                } else {
+                    ga('send', 'event', 'заказ', 'отправка формы обратного звонка', '[форма в шапке]');
+                }
 
                 $.ajax({
                     url: "./mail.php",
